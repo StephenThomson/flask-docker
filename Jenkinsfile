@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Debug Info') {
             steps {
-                sh 'ls -al'
                 sh 'whoami'
                 sh 'docker -v'
             }
@@ -12,13 +11,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'ToDo'
+                sh './build.sh'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'ToDo'
+                echo './dockertest.sh'
             }
         }
 
