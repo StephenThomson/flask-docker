@@ -1,13 +1,16 @@
 version: "3"
 services:
-    python:
+    jenkins:
         build: .
         image: jenkins_workshop:latest
+#        image: jenkins/jenkins:lts
         container_name: jenkins_workshop
-#        tty: true
-#        working_dir: /home/app
+        #        tty: true
+        #        working_dir: /home/app
         volumes:
             - ./jenkins_home:/var/jenkins_home
+            - /var/run/docker.sock:/var/run/docker.sock
         ports:
             - 8080:8080
             - 50000:50000
+        privileged: true

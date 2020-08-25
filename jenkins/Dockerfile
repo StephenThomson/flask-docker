@@ -12,6 +12,8 @@ RUN apt-get update \
         $(lsb_release -cs) \
         stable" \
     && apt-get update \
-    && apt-get install -y docker-ce \
-    && usermod -a -G docker jenkins
+    && apt-get install -y docker-ce docker-ce-cli containerd.io \
+    && usermod -aG docker jenkins
+#RUN ls -al /var/run/docker.sock
+#RUN chmod 666 /var/run/docker.sock
 USER jenkins

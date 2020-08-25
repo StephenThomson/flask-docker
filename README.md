@@ -85,3 +85,5 @@ Test: `./dockertest.sh`
 
 * https://www.jenkins.io/doc/book/pipeline/jenkinsfile/
 
+* https://itnext.io/docker-in-docker-521958d34efd
+
