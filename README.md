@@ -58,7 +58,7 @@ Test: `./dockertest.sh`
   
   * Delete the "Branch Specifier" (so it can build any branch based on the branch parameter)
   
-  * Leave "Lightweight checkout" checked
+  * Uncheck "Lightweight checkout"
 
 * Click "Save"
 
