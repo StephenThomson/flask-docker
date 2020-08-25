@@ -1,7 +1,8 @@
 version: "3"
 services:
     python:
-        image: jenkins/jenkins:lts
+        build: .
+        image: jenkins_workshop:latest
         container_name: jenkins_workshop
 #        tty: true
 #        working_dir: /home/app

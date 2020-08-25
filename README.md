@@ -24,6 +24,15 @@ Test: `./dockertest.sh`
 
 * Create your admin user and click through past "Save and continue"
 
+// MAYBE?* Install the "Docker Pipeline" plugin
+// MAYBE?
+// MAYBE?  * Click "Manage Jenkins"
+// MAYBE?  * Click "Manage Plugins"
+// MAYBE?  * Go to the "Available" tab
+// MAYBE?  * Search for "docker"
+// MAYBE?  * Select "Docker Pipeline"
+// MAYBE?  * Click "Install without restart"
+
 ### Setting up our pipeline
 
 * Click "Create a job"

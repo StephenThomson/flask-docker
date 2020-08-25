@@ -5,6 +5,7 @@ pipeline {
         stage('Debug Info') {
             steps {
                 sh 'ls -al'
+                sh 'whoami'
                 sh 'docker -v'
             }
         }
