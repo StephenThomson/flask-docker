@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Debug Info') {
             steps {
+                sh 'pwd'
                 sh 'whoami'
                 sh 'docker -v'
             }
