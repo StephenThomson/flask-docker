@@ -1,0 +1,12 @@
+version: "3"
+services:
+    python:
+        image: jenkins/jenkins:lts
+        container_name: jenkins_workshop
+#        tty: true
+#        working_dir: /home/app
+        volumes:
+            - ./jenkins_home:/var/jenkins_home
+        ports:
+            - 8080:8080
+            - 50000:50000
