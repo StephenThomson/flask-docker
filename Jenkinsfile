@@ -25,9 +25,9 @@ pipeline {
 
         // If the branch is master...
         stage('Deploy') {
-            //when {
-            //    expression { params.BRANCH == 'master' }
-            //}
+            when {
+                expression { params.BRANCH == 'master' }
+            }
             steps {
                 sh '''
                     eval `ssh-agent -s` && ssh-add
