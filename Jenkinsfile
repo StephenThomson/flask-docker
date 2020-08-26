@@ -12,14 +12,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                // sh './build.sh'
-                sh 'docker build -t flask-docker .'
+                sh './build.sh'
             }
         }
 
         stage('Test') {
             steps {
-                echo './dockertest.sh'
+                sh './dockertest.sh'
             }
         }
 
