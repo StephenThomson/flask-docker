@@ -82,6 +82,14 @@ Test: `./dockertest.sh`
 
 * Connect the app to your Git repository
 
+* Create a deploy key
+
+  * `cd .ssh`
+  * `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+  * `cd ../`
+  
+* Add the deploy key to you GitHub repo with write access
+
 ### Useful commands
 
 * Log into the jenkins container `docker exec -it jenkins_workshop /bin/bash`
