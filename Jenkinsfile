@@ -25,9 +25,7 @@ pipeline {
 
         // If the branch is master...
         stage('Deploy') {
-            when {
-                expression { params.BRANCH == 'master' }
-            }
+            when { branch 'master' }
             steps {
                 echo 'ToDo: Deploy the app'
                 echo 'ToDo: Post deployment alert (e.g. in Slack)'
@@ -35,9 +33,7 @@ pipeline {
         }
 
         stage('Smoke Tests') {
-            when {
-                expression { params.BRANCH == 'master' }
-            }
+            when { branch 'master' }
             steps {
                 echo 'ToDo: Run some smoke tests on the deployed app'
                 echo 'ToDo: Post smoke test failure alert (e.g. in Slack)'
@@ -45,9 +41,7 @@ pipeline {
         }
 
         stage('Rollback on Smoke Test Failure') {
-            when {
-                expression { params.BRANCH == 'master' }
-            }
+            when { branch 'master' }
             steps {
                 echo 'ToDo: Run some smoke tests on the deployed app'
                 echo 'ToDo: Post rollback alert (e.g. in Slack)'
