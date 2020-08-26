@@ -25,12 +25,18 @@ pipeline {
 
         // If the branch is master...
         stage('Deploy') {
-            when {
-                expression { params.BRANCH == 'master' }
-            }
+            //when {
+            //    expression { params.BRANCH == 'master' }
+            //}
             steps {
-                echo 'ToDo: Deploy the app'
-                echo 'ToDo: Post deployment alert (e.g. in Slack)'
+                sh '''
+                    git fetch --all
+                    git checkout master
+                    git pull
+                    git checkout heroku-deploy
+                    git merge master
+                    git push
+                '''
             }
         }
 
