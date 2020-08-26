@@ -2,6 +2,12 @@
 
 Just a little something to introduce some people to CI/CD with Jenkins
 
+## Requirements
+
+You will need [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/), check you have both with this command...
+
+    docker -v && docker-compose -v 
+
 ## Sample App
 
 A hacked together Flask API in a docker container
@@ -16,7 +22,9 @@ Test: `./dockertest.sh`
 
 ### Setting up Jenkins
 
-* Fire up Jenkins in a Docker conatiner with Docker Compose `docker-compose up`
+* Move into the `jenkins` folder `cd jenkins`
+
+* Fire up Jenkins in a Docker container with Docker Compose `docker-compose up`
 
 * Hit http://localhost:8080/ and log in with the admin password you got in the output from the previous command
 
