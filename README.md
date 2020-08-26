@@ -80,7 +80,7 @@ Test: `./dockertest.sh`
 
 * Create a Heroku app
 
-* [Install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+* Connect the app to your Git repository
 
 ### Useful commands
 
