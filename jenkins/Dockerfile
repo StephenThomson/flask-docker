@@ -14,6 +14,7 @@ RUN apt-get update \
     && apt-get update \
     && apt-get install -y docker-ce docker-ce-cli containerd.io \
     && usermod -aG docker jenkins
-#RUN ls -al /var/run/docker.sock
-#RUN chmod 666 /var/run/docker.sock
-USER jenkins
+# It is recommended not to run Jenkins as root, but when running as the jenkins user,
+# it can't access /var/run/docker.sock, so we can't run docker commands in the
+# jenkins_workshop container :-(
+# USER jenkins

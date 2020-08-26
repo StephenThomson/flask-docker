@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'whoami'
-                sh 'docker -v'
+                sh 'docker info'
             }
         }
 
