@@ -30,12 +30,13 @@ pipeline {
             //}
             steps {
                 sh '''
+                    git remote set-url origin-ssh git@github.com:WillGibson/jenkins-workshop.git || git remote add origin-ssh git@github.com:WillGibson/jenkins-workshop.git
                     git fetch --all
                     git checkout master
                     git pull
                     git checkout heroku-deploy
                     git merge master
-                    git push
+                    git push origin-ssh heroku-deploy
                 '''
             }
         }
