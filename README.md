@@ -74,6 +74,14 @@ Test: `./dockertest.sh`
 
 * Click "Save"
 
+## Deploying to Heroku
+
+* (Create a Heroku account](https://signup.heroku.com/login)
+
+* Create a Heroku app
+
+* [Install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+
 ### Useful commands
 
 * Log into the jenkins container `docker exec -it jenkins_workshop /bin/bash`
