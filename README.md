@@ -68,7 +68,7 @@ Test: `./dockertest.sh`
   
   * Enter the repository URL "https://github.com/<your_github_username>/jenkins-workshop"
   
-  * Delete the "Branch Specifier" (so it can build any branch based on the branch parameter)
+  * The "Branch Specifier" should be $BRANCH
   
   * Uncheck "Lightweight checkout"
 
