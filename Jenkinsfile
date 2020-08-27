@@ -34,6 +34,9 @@ pipeline {
         }
 
         stage('Smoke Tests') {
+            when {
+                expression { params.BRANCH == 'master' }
+            }
             steps {
                 echo 'ToDo: Run some smoke tests on the deployed app'
                 echo 'ToDo: Post smoke test failure alert (e.g. in Slack)'
