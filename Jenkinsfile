@@ -12,6 +12,9 @@ pipeline {
         }
 
         stage('Build') {
+            when {
+                expression { params.BRANCH == 'master' }
+            }
             steps {
                 sh './build.sh'
             }
