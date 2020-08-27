@@ -19,7 +19,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'ToDo: Run the tests'
+                sh './build.sh'
             }
         }
 
