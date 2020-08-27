@@ -124,3 +124,24 @@ Test: `./dockertest.sh`
 * https://www.cloudbees.com/blog/getting-started-blue-ocean
 
 * https://devcenter.heroku.com/articles/build-docker-images-heroku-yml
+
+## Loose notes for the person running the workshop
+
+* Introduce yourself and let the others introduce themselves
+* Make sure everyone has Docker and Docker Compose
+* Make sure everyone can read the stuff on your screen share
+* Explain what CI/CD is
+* Tell them what Jenkins is
+* Get everyone's local Dockerised Jenkins fired up and get everyone logged in
+* Talk about agents (just what they are and that we're not bothering for this exercise)
+* Set up pipeline in the Jenkins UI
+* Talk about GitHub triggers (probably the normal way, but we can't do because it here because this Jenkins is not being exposed to the web)
+* Add Build & Test stages in a branch
+* Make the test fail to illustrate the build stopping if something goes wrong
+* Merge the branch into master and build
+* Add the when condition to Deploy stages and onward in a branch so that it only deploys etc. on master
+* Merge the branch into master and build to demonstrate it now doing those steps again
+* Deploy to Heroku
+* Smoke Tests (ToDo)
+* Rollback on Smoke Test Failure (ToDo)
+* Show them Blue Ocean (much more friendly UI)
