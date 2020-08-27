@@ -105,6 +105,8 @@ Test: `./dockertest.sh`
   
 * Add the deploy key to you GitHub repo with write access
 
+* Now when you build the master branch it should deploy to Heroku
+
 ### Useful commands
 
 * Log into the jenkins container `docker exec -it jenkins_workshop /bin/bash`
