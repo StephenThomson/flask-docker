@@ -1,4 +1,4 @@
-# An Introduction to Jenkins & Continous Integration
+# An Introduction to Jenkins & Continous Integration X
 
 Just a little something to introduce some people to CI/CD with Jenkins
 
@@ -15,7 +15,9 @@ Fork https://github.com/WillGibson/jenkins-workshop to your GitHub account, clon
     git clone git@github.com:<your_github_username>/jenkins-workshop.git \
     && cd jenkins-workshop \
     && git revert HEAD --no-edit \
-    && git push --force
+    && git push
+    
+Not that the above assumes that the person running the workshop left the repos such that the second to last commit has the Jenkinsfile full of ToDos like in https://github.com/WillGibson/jenkins-workshop/commit/0ebcc6a4c9687d53840e94fb7b13a1b941eb1540#diff-58231b16fdee45a03a4ee3cf94a9f2c3
 
 ## Sample App
 
@@ -85,9 +87,15 @@ Test: `./dockertest.sh`
 
 * Create a Heroku app
 
-* Set the stack of your app to container `heroku stack:set container`
+* Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 
-* Connect the app to your Git repository
+* Set the stack of your app to container `heroku stack:set container <your_heroku_app_name>`
+
+* Create a `heroku-deploy` branch from master and push it up
+
+* Connect the Heroku app to your Git repository
+
+* Set the Heroku app to deploy when changes are pushed to the `heroku-deploy` branch
 
 * Create a deploy key
 
@@ -116,4 +124,3 @@ Test: `./dockertest.sh`
 * https://www.cloudbees.com/blog/getting-started-blue-ocean
 
 * https://devcenter.heroku.com/articles/build-docker-images-heroku-yml
-
