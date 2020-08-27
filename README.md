@@ -1,4 +1,4 @@
-# An Introduction to Jenkins & Continous Integration X
+# An Introduction to Jenkins & Continuous Integration
 
 Just a little something to introduce some people to CI/CD with Jenkins
 
